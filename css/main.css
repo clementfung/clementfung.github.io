@@ -14,19 +14,23 @@ header nav {
     justify-content: left;
 }
 
-section p {
-    font-family: serif;
-    padding: 10px;
-    font-size: 24px;
-}
-
 #blurb {
     font-family: serif;
-    padding: 10px;
     font-size: 16px;   
 }
 
-#links {
+#links-title {
     font-family: serif;
-    padding: 10px;
+    padding: 0px;
+}
+
+#icon {
+    padding: 0px;
+    font-size: 24px;
+}
+
+footer {
+    font-family: serif;
+    padding-top: 40px;
+    font-size: 16px;
 }
