@@ -1,0 +1,32 @@
+header {
+    font-family: serif;
+}
+
+header h1 {
+    font-weight: 700;
+    display: flex;
+    justify-content: left;
+}
+
+header nav {
+    font-family: serif;
+    display: flex;
+    justify-content: left;
+}
+
+section p {
+    font-family: serif;
+    padding: 10px;
+    font-size: 24px;
+}
+
+#blurb {
+    font-family: serif;
+    padding: 10px;
+    font-size: 16px;   
+}
+
+#links {
+    font-family: serif;
+    padding: 10px;
+}
