@@ -30,7 +30,7 @@ getZdf <- function(df) {
 
   # Sort by average zscore
   zdf <- zdf[order(zdf$Z_AVG, decreasing = TRUE),]
-  return(zdf[1:70,])
+  return(zdf[1:250,])
 
 }
 
