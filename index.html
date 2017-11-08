@@ -1,110 +1,96 @@
 <!doctype html>
 <html>
-	
-	<!-- HEAD -->
-	<head>
-		<title>Clement Fung's Page</title>
-		<link href="css/main.css" rel="stylesheet" type="text/css"/>
-		<link href="css/bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-		<link href="css/stackicons-master/css/stackicons-social-minimal.css" rel="stylesheet" media="screen" type="text/css" />
-	</head>
 
-	<!-- BODY -->
-	<body>
+<!-- HEAD -->
+<head>
+	<title>Clement Fung's Page</title>
+	<link href="css/main.css" rel="stylesheet" type="text/css"/>
+	<link href="css/bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+	<link href="css/stackicons-master/css/stackicons-social-minimal.css" rel="stylesheet" media="screen" type="text/css" />
+</head>
 
-		<!-- THE NAVIGATION BAR >
-		<div class="container">
-			<nav class="navbar navbar-default navbar-static-top">
-				<div class="container-fluid">
-					<div id="navbar" class="navbar-collapse collapse">
-						<ul class="nav navbar-nav">
-							<li><a href="#">About Me</a></li>
-							<li><a href="#">Projects</a></li>
-							<li><a href="#">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
-		<!-- END -->
+<!-- BODY -->
+<body>
 
-		<!-- THE TOP HEADER -->		
-		<header class="container">
-			<div class="row">
-				<h1 class="col-sm-12">Clement Fung</h1>
-			</div>
-		</header>
-		<hr>
-		<!-- THE JUMBOTRON -->	
-		<!--section class="jumbotron">
+	<!-- THE NAVIGATION BAR - Keep this constant throughout the pages -->
 
-			<div class="row text-center">
-				<a class="btn btn-primary" href='#'> TEXT </a>
-			</div>
+	<div class="container">
+		<h1 id="sectitle">Clement Fung</h1>
+		<ul class="nav nav-justified">
+			<li class="active"><a href="#">About Me</a></li>
+			<li><a href="research.html">Teaching/Research/Projects</a></li>
+			<li><a href="interests.html">Other Interests</a></li>
+		</ul>
+	</div>
 
-		</section-->
+	<!-- MAIN BODY -->
+	<section class="container">
+		<div class="row">
 
-		<!-- MAIN BODY -->
-		<section class="container">
-			<div class="row">
+			<p class="col-sm-3"><img src="gallery/clement_headshot.jpg" style="width:100%;height:auto;"></p>
+
+			<div class="col-sm-8">
 				
-				<p class="col-sm-3"><img src="gallery/clement_headshot.jpg" style="width:100%;height:auto;"></p>
-				
-				<div class="col-sm-7">
-					<p id="blurb">
+				<p id="blurb">Thank you for visiting!</p>
 
-					Welcome! I'm currently a master's student in Computer Science at the <a href="https://www.cs.ubc.ca/">University of British Columbia</a>. I'm a member of the <a href="https://www.cs.ubc.ca/labs/nss/">Networks, Systems and Security Lab (NSS)</a>, working on building distributed machine learning systems under the supervision of <a href="http://www.cs.ubc.ca/~bestchai/">Ivan Beschastnikh</a>. 
+				<p id="blurb">
 
-					<br>Previously, I graduated from the University of Waterloo in <a href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering">Systems Design Engineering</a>.</p>
+					I'm a 2nd Year Masters Student in Computer Science @ <a href="https://www.cs.ubc.ca/">University of British Columbia</a>. 
+					<br> Member of the <a href="https://www.cs.ubc.ca/labs/nss/">Networks, Systems and Security Lab (NSS)</a>.
+					<br>I finished my undergraduate in 2016 @ University of Waterloo <a href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering">Systems Design Engineering</a>.
+				</p>	
 
-					<p id="blurb">My current research interests include machine learning, privacy, distributed systems and security.<br> I also currently serve as the president of the <a href="https://www.cs.ubc.ca/~csgsa">CSGSA</a>.</p> 
+				<p id="blurb">
 
-					<p id="blurb">Outside of my academic interests, I'm also very interested in and love to learn about:</p> 
+					My current research interests include machine learning, differential privacy, distributed systems and security. I work on problems that intersect these spaces under the helpful supervision of <a href="http://www.cs.ubc.ca/~bestchai/">Ivan Beschastnikh</a>. 
+					I also currently serve as the president of the Computer Science Graduate Student's Association (<a href="https://www.cs.ubc.ca/~csgsa">CSGSA</a>). 
+
+				</p>
+
+					<!--p id="blurb">Outside of my academic interests, I'm also very interested in and love to learn about:</p> 
 
 					<ul class="col-sm-12" id="blurb">
 						<li>Soccer/Football, and its impending growth in North America</li>
 						<li>Board Game Design</li>
 						<li>City Planning & Urban Development</li>
 						<li>Cinema</li>
-					</ul>
-
-					<p id="blurb">Thank you for visiting!</p>
+					</ul-->
 
 				</div>
 			</div>
-			
+
 			<div class="row">
 				<div class="col-sm-3">
-					<h2 id="links-title">Links</h2>
-					<ul>
+					<h2 id="sectitle">Links</h2>
+					<ul id="blurb">
 						<li><a href="gallery/resume.pdf">Resume</a></li>
 						<li><a href="gallery/clement_cv.pdf">CV</a></li>
 					</ul>
 				</div>
 
-				<div class="col-sm-6">
-					<h2 id="links-title">Contact Me!</h2>
-						
-						<p class="col-sm-2" id="icon">
-							<a title="Email" class="st-icon-email" href="mailto:clement.y.fung@gmail.com">Email</a>
-						</p>
+				<div class="col-sm-7">
+					<h2 id="sectitle">Find Me!</h2>
 
-						<p class="col-sm-2" id="icon">
-							<a title="Facebook" class="st-icon-facebook-alt" href="https://www.facebook.com/clement.fung.93">Facebook</a>
-						</p>
-						
-						<p class="col-sm-2" id="icon">
-							<a title="Twitter" class="st-icon-twitter" href="https://twitter.com/clemfung">Twitter</a>
-						</p>
-		    			
-		    			<p class="col-sm-2" id="icon">
-		    				<a title="LinkedIn" class="st-icon-linkedin" href="https://ca.linkedin.com/in/clfung">LinkedIn</a>
-		    			</p>
-		    			
-		    			<p class="col-sm-2" id="icon">
-		    				<a title="Flickr" class="st-icon-flickr" href="https://www.flickr.com/photos/clementfung">Flickr</a>
-		    			</p>
-					
+					<p class="col-sm-2" id="icon">
+						<a title="Email" class="st-icon-email" href="mailto:clement.y.fung@gmail.com">Email</a>
+					</p>
+
+					<p class="col-sm-2" id="icon">
+						<a title="Facebook" class="st-icon-facebook-alt" href="https://www.facebook.com/clement.fung.93">Facebook</a>
+					</p>
+
+					<p class="col-sm-2" id="icon">
+						<a title="Twitter" class="st-icon-twitter" href="https://twitter.com/clemfung">Twitter</a>
+					</p>
+
+					<p class="col-sm-2" id="icon">
+						<a title="LinkedIn" class="st-icon-linkedin" href="https://ca.linkedin.com/in/clfung">LinkedIn</a>
+					</p>
+
+					<p class="col-sm-2" id="icon">
+						<a title="Flickr" class="st-icon-flickr" href="https://www.flickr.com/photos/clementfung">Flickr</a>
+					</p>
+
 				</div>
 			</div>
 		</section>
@@ -117,4 +103,4 @@
 		</footer>
 
 	</body>
-</html>
+	</html>
