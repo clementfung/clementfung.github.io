@@ -64,6 +64,12 @@ table {
   padding-bottom: 40px;
 }
 
+tr{
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-collapse: collapse;
+}
+
 /* Customize the nav-justified links to be fill the entire space of the .navbar */
 
 .nav-justified {
