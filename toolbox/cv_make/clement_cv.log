@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.2)  13 NOV 2017 11:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.8.25)  13 NOV 2017 15:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -9,10 +9,10 @@ Babel <3.9h> and hyphenation patterns for 2 languages loaded.
 (./res.cls
 Document Style `res' <26 Sep 89>.
 Document Class: res 2000/05/19 v1.4b Resume class
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(/home/cfung/texmf/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/home/cfung/texmf/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -204,43 +204,48 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 41.
 LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <12> not available
-(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 46.
+(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 48.
 LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <10> not available
-(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 52.
-LaTeX Font Info:    Try loading font information for OMS+pnc on input line 57.
+(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 54.
+LaTeX Font Info:    Try loading font information for OMS+pnc on input line 59.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspnc.fd
 File: omspnc.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pnc/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 59.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 258.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 258.
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 258.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 258.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 258.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 297.
+[2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 297.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 297.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 297.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 297.
  ) 
 Here is how much of TeX's memory you used:
- 4354 strings out of 495028
- 65249 string characters out of 6181498
- 142640 words of memory out of 5000000
- 7582 multiletter control sequences out of 15000+600000
- 10253 words of font info for 25 fonts, out of 8000000 for 9000
+ 4357 strings out of 495028
+ 65257 string characters out of 6181497
+ 141640 words of memory out of 5000000
+ 7583 multiletter control sequences out of 15000+600000
+ 11775 words of font info for 27 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 29i,8n,26p,180b,400s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,8n,26p,173b,398s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/n
-cntrsbk/uncr8a.pfb>
-Output written on clement_cv.pdf (3 pages, 64454 bytes).
+cntrsbk/uncr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ncntrsbk/uncr
+i8a.pfb>
+Output written on clement_cv.pdf (2 pages, 72706 bytes).
 PDF statistics:
- 39 PDF objects out of 1000 (max. 8388607)
- 29 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
+ 40 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
