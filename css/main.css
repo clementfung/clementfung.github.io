@@ -34,6 +34,12 @@ header nav {
     padding: 0px;
 }
 
+#subsectitle {
+    font-family: serif;
+    font-size: 24px;   
+    padding: 0px;
+}
+
 img.logo {
     vertical-align: middle;
     width: 80%;
@@ -69,9 +75,13 @@ table {
   padding-bottom: 40px;
 }
 
-tr{
-  border-bottom: 1px solid black;
+hr{
   border-top: 1px solid black;
+}
+
+tr{
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
   border-collapse: collapse;
 }
 
