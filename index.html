@@ -1,191 +1,169 @@
+
 <!doctype html>
 <html>
 
 <!-- HEAD -->
 <head>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113874144-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113874144-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-	  gtag('config', 'UA-113874144-1');
-	</script>
+      gtag('config', 'UA-113874144-1');
+    </script>
 
+    <title>Clement Fung's Page</title>
+    <link href="css/bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="css/stackicons-master/css/stackicons-social-minimal.css" rel="stylesheet" media="screen" type="text/css" />
 
-	<title>Clement Fung's Page</title>
-	<link href="css/main.css" rel="stylesheet" type="text/css"/>
-	<link href="css/bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-	<link href="css/stackicons-master/css/stackicons-social-minimal.css" rel="stylesheet" media="screen" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="css/sidebar.css" rel="stylesheet" type="text/css"/>
+
 </head>
 
-<!-- BODY -->
 <body>
+    
+<div class="container">
+    
+    <div class="row profile">
+        
+        <div class="col-md-3">
+            <div class="profile-sidebar">
+                <!-- SIDEBAR USERPIC -->
+                <div class="profile-userpic">
+                    <img src="gallery/images/clement_headshot.jpg" class="img-responsive" alt="">
+                </div>
+                <!-- END SIDEBAR USERPIC -->
 
-	<!-- THE NAVIGATION BAR - Keep this constant throughout the pages -->
+                <!-- SIDEBAR USER TITLE -->
+                <div class="profile-usertitle">
+                    <div class="profile-usertitle-name">
+                        Clement Fung
+                    </div>
+                    <div class="profile-usertitle-job">
+                        Computer Science Graduate Student @ UBC
+                    </div>
+                </div>
+                <!-- END SIDEBAR USER TITLE -->
 
-	<div class="container">
-		<h1 id="sectitle">Clement Fung</h1>
-		<ul class="nav nav-justified">
-			<li class="active"><a href="#">About Me</a></li>
-			<li><a href="projects.html">Projects</a></li>
-			<li><a href="interests.html">Other</a></li>
-		</ul>
-	</div>
+                <!-- SIDEBAR MENU -->
+                <div class="profile-usermenu">
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="#">
+                            <i class="glyphicon glyphicon-home"></i>
+                            Home </a>
+                        </li>
+                        <li>
+                            <a href="research.html">
+                            <i class="glyphicon glyphicon-leaf"></i>
+                            Research </a>
+                        </li>
+                        <li>
+                            <a href="projects.html">
+                            <i class="glyphicon glyphicon-briefcase"></i>
+                            Projects </a>
+                        </li>
+                        <li>
+                            <a href="gallery/clement_cv.pdf">
+                            <i class="glyphicon glyphicon-list-alt"></i>
+                            CV </a>
+                        </li>
+                        <li>
+                            <a href="https://scholar.google.ca/citations?hl=en&user=j-0C0kUAAAAJ">
+                            <i class="glyphicon glyphicon-education"></i>
+                            Google Scholar </a>
+                        </li>
+                        <li>
+                            <a href="misc.html">
+                            <i class="glyphicon glyphicon-education"></i>
+                            Misc </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END MENU -->
+            </div>
+        </div>
 
-	<!-- MAIN BODY -->
-	<section class="container">
-		<div class="row">
+        <div class="col-md-9">
+            
+            <div class="profile-content">
+               
+                <h3>Summary</h3>
 
-			<p class="col-sm-3"><img src="gallery/images/clement_headshot.jpg" style="width:100%;height:auto;"></p>
+                <p>Thank you for visiting!</p>
 
-			<div class="col-sm-7">
-				
-				<p id="blurb">Thank you for visiting!</p>
+                <p>
+                    I'm a 2nd Year MSc Computer Science student at the <a href="https://www.cs.ubc.ca/">University of British Columbia</a> and a member of the <a href="https://www.cs.ubc.ca/labs/nss/">Networks, Systems and Security (NSS)</a> Lab. I work under the helpful supervision of <a href="http://www.cs.ubc.ca/~bestchai/">Ivan Beschastnikh</a>.
+                </p>    
 
-				<p id="blurb">
-					I'm a 2nd Year MSc Computer Science student at the <a href="https://www.cs.ubc.ca/">University of British Columbia</a> and a member of the <a href="https://www.cs.ubc.ca/labs/nss/">Networks, Systems and Security (NSS)</a> Lab. I work under the helpful supervision of <a href="http://www.cs.ubc.ca/~bestchai/">Ivan Beschastnikh</a>.
-				</p>    
-
-                <p id="blurb">	
+                <p>  
                     In 2016, I finished my BASc <a href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering">Systems Design Engineering</a> at the University of Waterloo, where I spent several work terms working on a wide variety of projects, from developing tools for bioinformatics research to building online recommender systems infrastructure at Linkedin. 
-				</p>	
+                </p>    
 
-				<p id="blurb">
+                <p>
 
-					My current research interests include distributed systems (current flavor of the month is blockchain), distributed multi-party machine learning, attacks on multi-party ML, and corresponding defenses for these attacks. Lately, I am especially interested in privacy and security vulnerabilities in federated learning. 
-
-				</p>
-
-                <p id="blurb">
-
-                    [<a href="https://scholar.google.ca/citations?hl=en&user=j-0C0kUAAAAJ">Google Scholar</a>]
-                    [<a href="gallery/clement_cv.pdf">CV</a>]
+                    My current research interests include distributed systems (current flavor of the month is blockchain), distributed multi-party machine learning, attacks on multi-party ML, and corresponding defenses for these attacks. Lately, I am especially interested in privacy and security vulnerabilities in federated learning. 
 
                 </p>
 
-				</div>
-			</div>
+                <div class="row">
 
-			<div class="row">
-
-                <div class="col-sm-6">
-					<h2 id="subsectitle">Recent News</h2>
-					<ul id="news">
-						<li><i>Aug 14th, 2018</i>: One of my summer side projects, "<a href="https://arxiv.org/abs/1808.04866">Mitigating Sybils in Federated Learning</a>" 
-						is now on arXiv!</li>
-						<li><i>May 26th, 2018</i>: I'm honoured to receive both
-						a UBC Computer Science <a
-						href="https://www.cs.ubc.ca/award/2018/05/ubc-computer-science-department-graduate-ta-award">Graduate
-						TA Award</a> and <a
-						href="https://www.cs.ubc.ca/award/2018/05/ubc-computer-science-department-student-service-award-0">Department
-						Student Service Award</a> for the 2017 academic year. Thank you!</li>
+                    <h3>Recent News</h3>
+                    <ul id="news">
+                        <li><i>Aug 14th, 2018</i>: One of my summer side projects, "<a href="https://arxiv.org/abs/1808.04866">Mitigating Sybils in Federated Learning</a>" 
+                        is now on arXiv!</li>
+                        <li><i>May 26th, 2018</i>: I'm honoured to receive both
+                        a UBC Computer Science <a
+                        href="https://www.cs.ubc.ca/award/2018/05/ubc-computer-science-department-graduate-ta-award">Graduate
+                        TA Award</a> and <a
+                        href="https://www.cs.ubc.ca/award/2018/05/ubc-computer-science-department-student-service-award-0">Department
+                        Student Service Award</a> for the 2017 academic year. Thank you!</li>
                         <li><i>May 11th, 2018</i>: I presented a <a href="gallery/TorMentor-Poster-Print.pdf">poster</a> and gave a talk on my research at the <a href="http://blogs.ubc.ca/cybersecuritysummit/">UBC CyberSecurity Summit</a>. The video is available <a href="https://youtu.be/rV6U-jy8e1k?t=1h13m30s">here</a>.</li>
                         <li><a href="interests.html">Older news</a></li>
-					</ul>
-				</div>
+                    </ul>
+                </div>
 
-				<div class="col-sm-6">
-					<h2 id="subsectitle">Find Me!</h2>
+                <div class="row">
+                    <h3>Find Me!</h3>
 
-					<p class="col-sm-2" id="icon">
-						<a title="Email" class="st-icon-email" href="mailto:clement.y.fung@gmail.com">Email</a>
-					</p>
+                    <p class="col-sm-2" id="icon">
+                        <a title="Email" class="st-icon-email" href="mailto:clement.y.fung@gmail.com">Email</a>
+                    </p>
 
-					<p class="col-sm-2" id="icon">
-						<a title="Facebook" class="st-icon-facebook-alt" href="https://www.facebook.com/clement.fung.93">Facebook</a>
-					</p>
+                    <p class="col-sm-2" id="icon">
+                        <a title="Facebook" class="st-icon-facebook-alt" href="https://www.facebook.com/clement.fung.93">Facebook</a>
+                    </p>
 
-					<p class="col-sm-2" id="icon">
-						<a title="Twitter" class="st-icon-twitter" href="https://twitter.com/clemfung">Twitter</a>
-					</p>
+                    <p class="col-sm-2" id="icon">
+                        <a title="Twitter" class="st-icon-twitter" href="https://twitter.com/clemfung">Twitter</a>
+                    </p>
 
-					<p class="col-sm-2" id="icon">
-						<a title="LinkedIn" class="st-icon-linkedin" href="https://ca.linkedin.com/in/clfung">LinkedIn</a>
-					</p>
+                    <p class="col-sm-2" id="icon">
+                        <a title="LinkedIn" class="st-icon-linkedin" href="https://ca.linkedin.com/in/clfung">LinkedIn</a>
+                    </p>
 
-					<p class="col-sm-2" id="icon">
-						<a title="Flickr" class="st-icon-github" href="https://github.com/clementfung">Github</a>
-					</p>
+                    <p class="col-sm-2" id="icon">
+                        <a title="Flickr" class="st-icon-github" href="https://github.com/clementfung">Github</a>
+                    </p>
 
-					<p class="col-sm-2" id="icon">
-						<a title="Flickr" class="st-icon-flickr" href="https://www.flickr.com/people/clementfung">Flickr</a>
-					</p>
+                    <p class="col-sm-2" id="icon">
+                        <a title="Flickr" class="st-icon-flickr" href="https://www.flickr.com/people/clementfung">Flickr</a>
+                    </p>
 
-				</div>
-			</div>
+                </div>
 
-        <h2 id="sectitle"> Research </h2>
-        <hr border-color="black">
+            </div>
 
-        <h2 id="subsectitle"> Publications </h2>
-        
-        <ul>
+            </div>
 
-        <!--li><p id="pub"> 
-            Biscotti: A Ledger for Private and Secure Peer-to-Peer Machine Learning <br>
-            <a href="https://github.com/m-shayanshafi">Muhammad Shayan</a>,
-            <b>Clement Fung</b>,
-            <a href="https://github.com/chrisjmyoon">Chris J.M. Yoon</a>, 
-            <a href="http://www.cs.ubc.ca/~bestchai/">Ivan Beschastnikh</a>
-            <br>
-            <i>Currently Under Submission</i> 
-        </p></li-->
+        </div>
 
-        <li><p id="pub"> 
-            Mitigating Sybils in Federated Learning Poisoning <br>
-            <b>Clement Fung</b>,
-            <a href="https://github.com/chrisjmyoon">Chris J.M. Yoon</a>, 
-            <a href="http://www.cs.ubc.ca/~bestchai/">Ivan Beschastnikh</a>.
-            <br>
-            <i>arXiv</i> 2018 [<a href="https://arxiv.org/pdf/1808.04866.pdf">PDF</a>]
-        </p></li>
+    </div>
 
-        <!--li><p id="pub"> 
-            Dancing in the Dark: Private Multi-Party Machine Learning in an Untrusted Setting <br>
-            <b>Clement Fung</b>,
-            <a href="https://github.com/jamiekoe">Jamie Koerner</a>, 
-            <a href="https://wantonsolutions.github.io/">Stewart Grant</a>,
-            <a href="http://www.cs.ubc.ca/~bestchai/">Ivan Beschastnikh</a>
-            <br>
-            <i>Currently Under Submission</i>
-        </p></li-->
+</body>
 
-        </ul>
-
-        <h2 id="subsectitle"> Talks </h2>
-        <ul>
-
-        <li><p id="pub"> 
-            Dancing in the Dark: Private Multi-Party Machine Learning in an Untrusted Setting <br>
-            <i><a href="http://blogs.ubc.ca/cybersecuritysummit/">UBC Cybersecurity Summit</a></i>, Vancouver, BC, 2018.
-            <br>
-            [<a href="https://youtu.be/rV6U-jy8e1k?t=1h13m30s">Video</a>] [<a href="gallery/TorMentor-Poster-Print.pdf">Poster</a>]
-        </p></li>
-        </ul>
-
-        <h2 id="sectitle">Teaching</h2> 
-        <hr>
-        <h2 id="subsectitle">Teaching Assistantships</h2>
-
-            <ul id="pub"> 
-                <li><a href="https://ubc-mds.github.io/course-descriptions/DSCI_523_data-wrangling/">DSCI 523 - Data Wrangling</a>, Fall 2018</li>
-                <li><a href="https://github.ugrad.cs.ubc.ca/CPSC340-2017W-T2/home/blob/master/course_info.md">CPSC 340 - Machine Learning</a>, Winter 2018</li>
-                <li><a href="https://www.cs.ubc.ca/~schmidtm/Courses/340-F17/">CPSC 340 - Machine Learning</a>, Fall 2017</li>
-                <li><a href="https://sites.google.com/site/ubccpsc210enrol/">CPSC 210 - Software Construction</a>, Winter 2017</li>
-                <li><a href="https://sites.google.com/site/ubccpsc210enrol/">CPSC 210 - Software Construction</a>, Fall 2016</li>
-            </ul>
-
-		</section>
-
-		<!-- COPYRIGHT -->
-		<footer class="container">
-			<div class="row"> 
-				<p class="col-sm-12"><i>&copy; Clement Fung 2017 </i></p>
-			</div>
-		</footer>
-
-	</body>
-	</html>
+</html>
