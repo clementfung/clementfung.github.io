@@ -1,0 +1,52 @@
+header {
+    font-family: serif;
+}
+
+header h1 {
+    font-weight: 700;
+    display: flex;
+    justify-content: left;
+}
+
+header nav {
+    font-family: serif;
+    display: flex;
+    justify-content: left;
+}
+
+#news {
+    font-family: sans-serif;
+    font-size: 16px;   
+}
+
+img.logo {
+    vertical-align: middle;
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#icon {
+    padding: 0px;
+    font-size: 24px;
+}
+
+body {
+  padding-top: 20px;
+  font-family: sans-serif;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 1em;
+}
+
+hr{
+  border-top: 1px solid black;
+}
+
+tr{
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+  border-collapse: collapse;
+}
