@@ -29,13 +29,13 @@ body {
 }
 
 .profile-usertitle-name {
-  color: #31708E;
+  color: #002d80;
   font-size: 32px;
   font-weight: 600;
 }
 
 .profile-usertitle-job {
-  color: #31708E;
+  color: #002d80;
   font-size: 18px;
   font-weight: 400;
 }
@@ -53,7 +53,7 @@ body {
 }
 
 .profile-usermenu ul li a {
-  color: #31708E;
+  color: #002d80;
   font-size: 18px;
   font-weight: 400;
 }
@@ -65,7 +65,7 @@ body {
 
 .profile-usermenu ul li a:hover {
   background-color: #fafcfd;
-  color: #31708E;
+  color: #002d80;
 }
 
 .profile-usermenu ul li.active {
@@ -73,9 +73,9 @@ body {
 }
 
 .profile-usermenu ul li.active a {
-  color: #914f31;
+  color: #800017;
   background-color: #f6f9fb;
-  border-left: 2px solid #914f31;
+  border-left: 2px solid #800017;
   margin-left: -2px;
 }
 
@@ -86,11 +86,11 @@ body {
   min-height: 460px;
   font-family: sans-serif;
   font-size: 18px; 
-  color: #31708E;
+  color: #002d80;
 }
 
 .profile-content h3 {
-  color: #31708E;
+  color: #002d80;
   font-weight: 600;
 }
 
@@ -110,5 +110,9 @@ body {
 }
 
 .profile-content a:link {
-  color: #914f31;
+  color: #800017;
+}
+
+.profile-content a:visited {
+  color: #330009;
 }
