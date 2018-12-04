@@ -3,11 +3,16 @@
 \usepackage{helvet} % Default font is the helvetica postscript font
 \usepackage{hyperref}
 \usepackage[a4paper,left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\lhead{Clement Fung}
+\rhead{Computer Science PhD Applicant}
 
 \begin{document}
 
 \begin{center}
-{\Large \bf Clement Fung - Statement of Purpose for PhD Application}
+{\Large \bf Clement Fung - Statement of Purpose for Cornell Computer Science PhD Application}
 \end{center}
 
 I want to pursue a PhD in computer science, specifically in the field of computer security. I have a particular interest in securing and democratizing interactions with distributed machine learning systems. Given the increasing popularity of decentralized architectures like Google’s federated learning and the recent discoveries of attacks on models such as backdooring and attacks on data providers such as property inference, I consider this area to be both incredibly interesting and of paramount importance. Specifically, I am interested in developing robust systems for secure and private multi-party machine learning, in which users have full control and privacy over their own data. \\
@@ -33,10 +38,10 @@ My time spent pursuing research at UBC solidified my interest in continuing my r
 
 In addition to the systems I have built at UBC, I have experience building large scale systems over 2 internships spanning 8 months at LinkedIn. For both terms, I was a member of the distributed data systems team, working on Apache Kafka and Apache Samza pipeline integration with existing systems on the Voldemort team (distributed database) in 2014, and on the Online Relevance Infrastructure team in 2015. Following the conclusion of my Masters degree in December, I will be furthering my industry experience by spending 6 months working at Oasis Labs\footnote{\url{https://www.oasislabs.com/}}, an early stage privacy-preserving blockchain research startup founded by Professor Dawn Song from UC Berkeley. I am very excited for the opportunity to continue working with world-class people in a fast-paced environment and look forward to sharpening my skills in systems development, machine learning and security for my eventual PhD research. \\
 
-While my work so far is a first step towards securing distributed multi-party machine learning, there are still several unanswered questions left. For example, backdoor poisoning attacks that do not target full class labels are still very difficult to detect, and tracing their source is difficult in distributed multi-party settings. I notice that this research problem is part of the larger problem of security and accountability in distributed multi-party machine learning. One particular idea that I would like to pursue builds upon my work in Biscotti to allow retraining of machine learning models after poisoning attacks are detected and their data sources are identified. This idea would leverage ideas from data provenance and auditing frameworks on the blockchain to allow model providers to rapidly apply patches to models, ideally without requiring the original datasets or the associated clients. There are several methods for tackling this large research problem given the tremendous volume of new attacks and defenses being discovered in this field, coupled with the increase of distributed multi-party architectures, and I am excited to contribute to this important and rapidly growing field of research. \\
+While my work so far is a first step towards securing distributed multi-party machine learning, there are still several unanswered questions left. For example, backdoor poisoning attacks that do not target full class labels are still very difficult to detect, and tracing their source is difficult in distributed multi-party settings. I notice that this research problem is part of the larger problem of security and accountability in distributed multi-party machine learning. One particular idea that I would like to pursue builds upon my work in Biscotti to allow retraining of machine learning models after poisoning attacks or information leakages are detected and their data sources are identified. This idea would leverage ideas from data provenance and auditing frameworks on the blockchain to allow model providers to rapidly apply security and privacy patches to models, ideally without requiring the original datasets or the associated clients. There are several methods for tackling this large research problem given the tremendous volume of new attacks and defenses being discovered in this field, coupled with the increase of distributed multi-party architectures, and I am excited to contribute to this important and rapidly growing field of research. \\
 
-I would like to pursue a PhD in an environment with strong expertise in the field of machine learning security. At XXX University, I am particularly intrigued by the work X of Professor Y, which does Z and is interesting because ZZ. \\
+I would like to pursue a PhD in an environment with strong expertise in the field of machine learning security. At Cornell University, I am particularly intrigued by the information leakage work of Professors Vitaly Shmatikov and Thomas Ristenpart, who have developed several methods for attacking and quantifying information leakages in machine learning models. Both professors have done additional work in augmenting privacy and security to federated learning, which is an area I have particular experience with. As federated learning and other distributed machine learning architectures continues to grow in popularity, understanding and defending against privacy leakages will become increasingly urgent. \\
 
-Thank you for your time in considering me as an applicant of the PhD program.
+Thank you for your time in considering me as an applicant of the PhD program at Cornell University.
 
 \end{document}
