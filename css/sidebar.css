@@ -4,7 +4,7 @@ body {
 
 /* Profile container */
 .profile {
-  margin: 20px 0;
+  margin: 0 0 20px;
 }
 
 /* Profile sidebar */
@@ -16,11 +16,11 @@ body {
 .profile-userpic img {
   float: none;
   margin: 0 auto;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
-  border-radius: 50% !important;
+  border-radius: 5% !important;
 }
 
 .profile-usertitle {
@@ -81,7 +81,7 @@ body {
 
 /* Profile Content */
 .profile-content {
-  padding: 20px;
+  padding-left: 20px;
   background: #f7f9fb;
   min-height: 460px;
   font-family: sans-serif;
@@ -94,10 +94,18 @@ body {
   font-weight: 600;
 }
 
+.profile-content p {
+  padding: 0px 0px 0px;
+}
+
 .profile-content table {
     border-collapse: separate;
     border-spacing: 0 1em;
 }
+
+/*.profile-content table {
+    padding-left: 50px;
+}*/
 
 .profile-content hr {
   border-top: 1px solid black;
