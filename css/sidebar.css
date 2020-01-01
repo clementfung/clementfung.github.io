@@ -81,7 +81,7 @@ body {
 
 /* Profile Content */
 .profile-content {
-  padding-left: 20px;
+  padding-left: 0px;
   background: #f7f9fb;
   min-height: 460px;
   font-family: sans-serif;
@@ -92,10 +92,6 @@ body {
 .profile-content h3 {
   color: #002d80;
   font-weight: 600;
-}
-
-.profile-content p {
-  padding: 0px 0px 0px;
 }
 
 .profile-content table {
