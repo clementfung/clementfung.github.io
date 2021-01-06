@@ -23,4 +23,5 @@ img.logo {
 body {
   padding-top: 20px;
   font-family: sans-serif;
+  overflow-y: scroll;
 }
