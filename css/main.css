@@ -25,3 +25,12 @@ body {
   font-family: sans-serif;
   overflow-y: scroll;
 }
+
+blockquote {
+    border-left: 4px solid #002d80;   /* vertical bar */
+    padding-left: 1em;             /* space between bar and text */
+    margin-left: 0;                /* align with surrounding text */
+    font-size: 16px;
+    font-style: italic;            /* optional, for emphasis */
+    background-color: #d7eaff;     /* subtle background */
+}
