@@ -35,3 +35,41 @@ blockquote {
     background-color: rgba(253, 181, 21, 0.6);     /* subtle background */
     /* was #d7eaff;  */
 }
+
+/* news list */
+.news-list {
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+}
+
+.news-list li {
+    padding: 0.45rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 1.55;
+}
+
+.news-list li em {
+    font-style: italic;
+    color: var(--muted);
+    margin-right: 0.25rem;
+}
+
+.news-badge {
+    display: inline-block;
+    font-family: var(--font-ui);
+    font-weight: 600;
+    background: #e8f4fd;
+    color: #1a6496;
+    border: 1px solid #bee3f8;
+    border-radius: 3px;
+    padding: 0.05rem 0.35rem;
+    vertical-align: middle;
+    margin-right: 0.25rem;
+}
+
+.news-badge.misc    { background: #e8f4fd; color: #1a6496; border-color: #bee3f8; } /* Slate */
+.news-badge.talk    { background: #e8edf5; color: #4a5568; border-color: #c5cedf; } /* Slate */
+.news-badge.paper    { background: #fdf0e0; color: #9c6b1a; border-color: #f0d0a0; } /* Honey */
+.news-badge.service     { background: #e0f5ee; color: #1a7a52; border-color: #a0dfc5; } /* Mint */
+.news-badge.award     { background: #fde8f0; color: #8a1a4a; border-color: #f0a0c5; } /* Rose */

@@ -120,3 +120,14 @@ body {
 .profile-content a:visited {
   color: #800017;
 }
+
+/* @media (max-width: 767px) {
+  .profile-sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+  .profile-content {
+    margin-left: 0;
+  }
+} */
