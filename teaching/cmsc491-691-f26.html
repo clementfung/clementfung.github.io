@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CMSC 491/691 - Applied AI for Cybersecurity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+  :root {
+    --ink: #000000;
+    --paper: #F7F5F0;
+    --accent: #fdb515;
+    --line: rgba(26, 26, 26, 0.12);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  a { color: inherit; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 5rem 1.5rem 4.5rem;
+    position: relative;
+  }
+
+  .hero-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero .eyebrow { color: var(--accent); margin-bottom: 0.9rem; display: block; }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    line-height: 1.15;
+  }
+
+  .hero p.lede {
+    margin-top: 1.25rem;
+    max-width: 46ch;
+    color: rgba(247,245,240,0.75);
+    font-size: 1.05rem;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+    margin-top: 2.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    color: rgba(247,245,240,0.72);
+  }
+
+  .hero-meta div span {
+    display: block;
+    color: var(--accent);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+  }
+
+  .title-block {
+    display: inline-block;
+    max-width: 50ch;   /* was on the h1 before, now controls both */
+  }
+
+  .title-image {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin-top: 1.25rem;
+    border-radius: 4px;
+  }
+
+  /* ---------- Nav ---------- */
+  nav {
+    background: var(--ink);
+    border-bottom: 1px solid rgba(247,245,240,0.12);
+  }
+
+  nav .nav-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0.9rem 1.5rem;
+    display: flex;
+    gap: 1.75rem;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    color: rgba(247,245,240,0.72);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+
+  nav a:hover { color: var(--accent); }
+
+  /* ---------- Sections ---------- */
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  section {
+    padding: 3.5rem 0;
+  }
+
+  section:last-of-type { border-bottom: none; }
+
+  section .eyebrow { margin-bottom: 0.6rem; display: block; }
+
+  section h2 {
+    font-size: 1.65rem;
+    margin-bottom: 1.1rem;
+    border-bottom: 1px solid rgba(26,26,26,0.08);
+  }
+
+  section p { color: rgba(26,26,26,0.65); max-width: 60ch; }
+
+  .grid-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid rgba(26,26,26,0.08);
+    border-radius: 4px;
+    padding: 1.25rem 1.4rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card p { font-size: 0.92rem; margin: 0; }
+
+  ul.plain {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    color: rgba(26,26,26,0.65);
+  }
+
+  ul.plain li {
+    padding: 0.55rem 0;
+    border-top: 1px solid rgba(26,26,26,0.08);
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  ul.plain li:first-child { border-top: none; }
+
+  ul.plain .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--ink);
+    min-width: 2.5rem;
+  }
+
+  /* ---------- Schedule table ---------- */
+  .table-wrap {
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(26,26,26,0.1);
+    border-radius: 4px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    min-width: 620px;
+  }
+
+  thead th {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: left;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.85rem 1rem;
+  }
+
+  tbody td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid rgba(26,26,26,0.08);
+    vertical-align: top;
+    color: var(--ink);
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  tbody tr:nth-child(even) { background: rgba(26,26,26,0.04); }
+
+  td.week {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--ink);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  td.topic { font-weight: 600; }
+
+  td.reading, td.due { color: rgba(26,26,26,0.65); font-size: 0.88rem; }
+
+  tr.milestone td.topic { color: var(--ink); }
+  tr.milestone { background: rgba(221, 163, 4, 0.5) !important; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background: var(--ink);
+    color: rgba(247,245,240,0.6);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    .grid-two { grid-template-columns: 1fr; }
+    .hero { padding: 3.5rem 1.25rem 3rem; }
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  blockquote {
+      border-left: 4px solid #000000;   /* vertical bar */
+      padding-left: 1em;             /* space between bar and text */
+      margin-left: 0;                /* align with surrounding text */
+      font-size: 20px;
+      font-style: bold italic;            /* optional, for emphasis */
+      background-color: rgba(253, 181, 21, 0.6);     /* subtle background */
+      /* was #d7eaff;  */
+    }
+
+</style>
+
+</head>
+<body>
+
+<header class="hero">
+  
+  <div class="hero-inner">
+    <!-- <span class="eyebrow">CMSC 491/691</span> -->
+    <div class="title-block">
+      <img class="title-image" src="umbc-logo.png" alt="UMBC logo">
+      <h1>CMSC 491/691 Applied AI for Cybersecurity</h1>
+    </div>
+    <p class="lede">Through paper readings, class discussions, and a course project, this course explores the application of AI to various domains of cybersecurity.</p>
+    <div class="hero-meta">
+      <div><span>Instructor</span><a href="https://clementfung.me">Prof. Clement Fung</a></div>
+      <div><span>Meets</span>Tues &amp; Thurs, 9:30-10:45 AM</div>
+      <div><span>Location</span>Engineering, Room 231</div>
+      <!-- <div><span>Credits</span>3</div> -->
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#overview">Overview</a>
+    <a href="#logistics">Logistics</a>
+    <!-- <a href="#grading">Grading</a> -->
+    <a href="#schedule">Schedule</a>
+    <a href="#resources">Resources</a>
+  </div>
+</nav>
+
+<main>
+
+  <section id="overview">
+    <!-- <span class="eyebrow">Overview</span> -->
+    <h2>Overview</h2>
+
+    <blockquote>
+      📢 Page is still under construction; details are tentative.
+    </blockquote>
+
+    <h3>Course Description</h3>
+      
+      This course focuses on the intersection of two trends:
+      <ol>  
+        <li>Computing technology is ubiquitous. Banks, transportation networks, power grids, social media, and even the internet itself all rely on complex computer algorithms, systems, and infrastructure. As the world continues to become more and more interconnected, it becomes increasingly important to ensure that these systems operate correctly, even in the presence of malicious actors.</li>
+        <li>Since computing technology is used and deployed across many contexts, the data collected and generated by such systems has also become ubiquitous. AI, which has become increasingly prevalent and powerful, brings the potential to leverage such data for automated insights to help improve cybersecurity. In particular, such data can be used to help defend and secure computing technology from adversaries (and often, such data can help adversaries too).</li>
+      </ol>
+
+      This course covers topics at the intersection of AI and cybersecurity, with a focus on how AI can be applied to improve the cybersecurity of modern computing systems. 
+      This course covers the intersection of AI with a broad selection of cybersecurity topics, such as network security, systems security, usable security, and more. 
+      To do so, this course will involve reading, reviewing, and discussing recent research papers in each of these respective areas. 
+      This course provides a general overview of AI and cybersecurity research, and serves as a foundation for those looking to do research in these areas. <br><br>
+
+    <h3>Learning Objectives</h3>
+    
+    After completing this course, students should be able to:
+    <ul>
+      <li>Describe the various ways in which artificial intelligence (AI) impacts our existing computing technology systems, across a variety of domains and contexts</li>
+      <li>Apply concepts from AI and cybersecurity to help build, deploy, and maintain computing systems that operate securely in adversarial environments</li>
+      <li>Critically analyze the results, contributions, and implications of newly published research papers in the areas of AI and cybersecurity</li>
+      <li>Contribute to projects that develop novel research contributions in AI and cybersecurity</li>
+    </ul>
+
+  </section>
+
+  <section id="logistics">
+    
+    <h2>Logistics</h2>
+
+    <!-- <ul class="plain">
+      <li><span class="tag">Office Hours</span> TBD</li>
+      <li><span class="tag">Course Page</span> (link to Blackboard)</li></li>
+      <li><span class="tag">Paper Reviews</span> (link to HotCRP)</li></li>
+    </ul> -->
+
+    The class will meet Tuesdays and Thursdays from 9:30am-10:45am in Engineering 231. <br><br>
+
+    Classes primarily consist of two types: "Lectures", which will be led by the instructor and focus on covering background topics, 
+    and "Discussions", which will be led by students and consist of discussions of recent research papers in AI and cybersecurity. 
+    Before each "Discussion" session, students are expected to read the assigned research papers, 
+    write and submit reviews for these papers, 
+    and lead or participate in in-class discussions about these research papers. <br><br>
+    
+    The course will include two homework assignments. 
+    These homework assignments will consist of lightweight coding tasks and will focus on background topics covered in lectures during the first half of the course.
+    The goal is to help students familiarize themselves with code implementations for AI and cybersecurity before they start working on their course projects. <br><br>
+
+    This course also contains a project component. 
+    Students will be expected to form small teams (requirements on team sizes TBD) and conduct a small research project in the areas of AI and cybersecurity.
+    When reasonable, students are encouraged to build on the contributions of research papers covered in class for their projects. <br><br>
+
+  <!-- </section>
+
+  <section id="grading"> -->
+    <!-- <span class="eyebrow">Grading</span> -->
+    <h3>Grading</h3>
+    Tentatively, final grades will be weighted by the following components:
+    <ul>
+      <li>Participation in Class Discussions: 25%</li>
+      <li>Paper Reviews: 20%</li>
+      <li>Homeworks: 10%</li>
+      <li>Course Project: 45%
+        <ul>
+          <li>Project Proposal: 5%</li>
+          <li>Midpoint Presentation: 5%</li>
+          <li>Final Presentation: 15%</li>
+          <li>Final Report: 20%</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section id="schedule">
+    <!-- <span class="eyebrow">Course Schedule</span> -->
+    <h2>Course Schedule</h2>
+
+    Course schedule is tentative. 
+    If there are any topics that seem of particular interest, I will try to incorporate them into the schedule. <br><br>
+
+    The first half of the class will roughly focus on the <b>fundamentals and applications</b>. Classes will cover the basics of AI, cybersecurity, and 
+    how AI is used across various applications. The second half of the class will focus on <b>implications of AI</b>: topics such as usability, secure AI, 
+    and the rise of LLMs will be covered. 
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Topic</th>
+            <th>Reading</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="week">Aug 25</td>
+            <td class="topic">Course Introduction</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Aug 27</td>
+            <td class="topic">Lecture: Background on Cybersecurity</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Sept 1</td>
+            <td class="topic">Lecture: Background on AI/ML</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Sept 3</td>
+            <td class="topic">Lecture: Research Papers and Reviews</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Sept 8</td>
+            <td class="topic">Discussion: Best Practices for ML + Cybersecurity</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Sept 10</td>
+            <td class="topic">Lecture: AI for Network Security</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Sept 15</td>
+            <td class="topic">Discussion: AI for Network Security</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Sept 17</td>
+            <td class="topic">Lecture: AI for Software Security</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Sept 22</td>
+            <td class="topic">Discussion: AI for Software Security</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Sept 24</td>
+            <td class="topic">Lecture: AI for Cyber-Physical Systems (CPS) Security</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Sept 29</td>
+            <td class="topic">Discussion: AI for CPS Security</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Oct 1</td>
+            <td class="topic">Discussion: Usable Security</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Oct 6</td>
+            <td class="topic">Discussion: Malware Detection</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Oct 8</td>
+            <td class="topic">Discussion: Web and Application Security</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr class="milestone">
+            <td class="week">Oct 13</td>
+            <td class="topic"><b>No Class - Fall Recess</b></td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Oct 15</td>
+            <td class="topic">Activity: Project Brainstorming and Team Matching</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Oct 20</td>
+            <td class="topic">Activity: Project Meetings</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Oct 22</td>
+            <td class="topic">Discussion: LLMs and Agents</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Oct 27</td>
+            <td class="topic">Discussion: LLMs and Agents II</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Oct 29</td>
+            <td class="topic">Lecture: Explainable AI (XAI)</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Nov 3</td>
+            <td class="topic">Discussion: XAI for Security</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Nov 5</td>
+            <td class="topic">Lecture: Attacking ML</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Nov 10</td>
+            <td class="topic">Activity: Midpoint Presentations</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Nov 12</td>
+            <td class="topic">Discussion: Attacking ML (Inference)</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Nov 17</td>
+            <td class="topic">Discussion: Attacking ML (Privacy)</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Nov 19</td>
+            <td class="topic">Discussion: Attacking ML (Supply Chain)</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr class="milestone">
+            <td class="week">Nov 24</td>
+            <td class="topic"><b>No Class - Class Recess</b></td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr class="milestone">
+            <td class="week">Nov 26</td>
+            <td class="topic"><b>No Class - Thanksgiving</b></td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Dec 1</td>
+            <td class="topic">Discussion: Human Factors</td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Dec 3</td>
+            <td class="topic"><b>Discussion: Organizational Factors</b></td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+          <tr>
+            <td class="week">Dec 8</td>
+            <td class="topic"><b>Final Project Presentations</b></td>
+            <td class="reading"></td>
+            <td class="due">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="resources">
+    <!-- <span class="eyebrow">Resources</span> -->
+    <h2>Helpful links</h2>
+    <ul class="plain">
+      <li><span class="tag">01</span> Course readings &amp; slides (posted on Blackboard after each lecture)</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  CMSC 491/691 - Applied AI for Cybersecurity
+</footer>
+
+</body>
+</html>
