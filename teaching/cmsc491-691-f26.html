@@ -241,9 +241,8 @@
     white-space: nowrap;
   }
 
-  td.topic { font-weight: 600; }
-
-  td.reading, td.due { color: rgba(26,26,26,0.65); font-size: 0.88rem; }
+  /* td.topic { font-weight: 600; } */
+  /* td.reading, td.due { color: rgba(26,26,26,0.65); font-size: 0.88rem; } */
 
   tr.milestone td.topic { color: var(--ink); }
   tr.milestone { background: rgba(221, 163, 4, 0.5) !important; }
@@ -279,6 +278,8 @@
     }
 
 </style>
+
+<base target="_blank">
 
 </head>
 <body>
@@ -317,9 +318,9 @@
     <!-- <span class="eyebrow">Overview</span> -->
     <h2>Overview</h2>
 
-    <blockquote>
+    <!-- <blockquote>
       📢 Page is still under construction; details are tentative.
-    </blockquote>
+    </blockquote> -->
 
     <h3>Course Description</h3>
       
@@ -351,9 +352,17 @@
     <h2>Logistics</h2>
 
     <ul>
-      <li><b>Office Hours</b>: Wednesdays 2-3pm ITE 333</li>
+      <li><b>Instructors</b>: 
+        <ul>
+          <li>Prof. Clement Fung (Lead Instructor)<br>
+          Contact: clementfung [at] umbc [dot] edu<br>
+          Office Hours: Wednesdays 2-3pm ITE 333</li>
+          <li>Sasha Mikhailova (Graduate Teaching Assistant)<br>
+          Contact: amikhai1 [at] umbc [dot] edu<br>
+          Office Hours: TBA</li>
+        </ul>
       <li><b>Course Page</b>:<a href="https://blackboard.umbc.edu/ultra/courses/_105778_1/outline">Blackboard Page</a></li></li>
-      <li><b>Paper Reviews</b>: (link to HotCRP)</li></li>
+      <li><b>Paper Reviews</b>: <a href="https://umbc-aisecf26.hotcrp.com">HotCRP</a></li></li>
     </ul>
 
     The class will meet Tuesdays and Thursdays from 9:30am-10:45am in Engineering 231. <br><br>
@@ -369,7 +378,7 @@
     The goal is to help students familiarize themselves with code implementations for AI and cybersecurity before they start working on their course projects. <br><br>
 
     This course also contains a project component. 
-    Students will be expected to form small teams (requirements on team sizes TBD) and conduct a small research project in the areas of AI and cybersecurity.
+    Students will be expected to form small teams of 2-4 members and conduct a small research project in the areas of AI and cybersecurity.
     When reasonable, students are encouraged to build on the contributions of research papers covered in class for their projects. <br><br>
 
   <!-- </section>
@@ -397,7 +406,7 @@
     <!-- <span class="eyebrow">Course Schedule</span> -->
     <h2>Course Schedule</h2>
 
-    Course schedule is tentative. 
+    📢 Course schedule is tentative. 
     If there are any topics that seem of particular interest, I will try to incorporate them into the schedule. <br><br>
 
     The first half of the class will roughly focus on the <b>fundamentals and applications</b>. Classes will cover the basics of AI, cybersecurity, and 
@@ -410,196 +419,246 @@
           <tr>
             <th>Date</th>
             <th>Topic</th>
-            <th>Reading</th>
             <th>Notes</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td class="week">Aug 25</td>
-            <td class="topic">Course Introduction</td>
-            <td class="reading"></td>
-            <td class="due">—</td>
+            <td><b>Course Introduction</b></td>
+            <td>—</td>
           </tr>
           <tr>
             <td class="week">Aug 27</td>
-            <td class="topic">Lecture: Background on Cybersecurity</td>
-            <td class="reading"></td>
-            <td class="due">—</td>
+            <td><b>Lecture: Background on Cybersecurity</b></td>
+            <td>—</td>
           </tr>
           <tr>
             <td class="week">Sept 1</td>
-            <td class="topic">Lecture: Background on AI/ML</td>
-            <td class="reading"></td>
-            <td class="due">—</td>
+            <td><b>Lecture: Background on AI/ML</b></td>
+            <td>—</td>
           </tr>
           <tr>
             <td class="week">Sept 3</td>
-            <td class="topic">Lecture: Research Papers and Reviews</td>
-            <td class="reading"></td>
-            <td class="due">—</td>
+            <td><b>Lecture: Research Papers and Reviews</b></td>
+            <td>—</td>
           </tr>
           <tr>
             <td class="week">Sept 8</td>
-            <td class="topic">Discussion: Best Practices for ML + Cybersecurity</td>
-            <td class="reading"></td>
+            <td>
+                <b>Discussion: Best Practices for ML + Cybersecurity</b>
+                <ul>
+                  <li>
+                    <a href="https://www.usenix.org/conference/usenixsecurity22/presentation/arp">Dos and Don'ts of Machine Learning in Computer Security. USENIX Security '22.</a>
+                  </li>
+                </ul>
+              </td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Sept 10</td>
-            <td class="topic">Lecture: AI for Network Security</td>
-            <td class="reading"></td>
-            <td class="due">—</td>
+            <td><b>Discussion: Network Security</b>
+              <ul>
+                <li> (IDS) <a href="https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_03A-3_Mirsky_paper.pdf">Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection. NDSS 2018.</a></li>
+                <li> (Botnets) <a href="https://ieeexplore.ieee.org/document/9152805">Throwing Darts in the Dark? Detecting Bots with Limited Data using Neural Data Augmentation. IEEE S&P 2020.</a></li>
+              </ul>
+            </td>
+            <td>HW1 out (Sept 11)</td>
           </tr>
           <tr>
             <td class="week">Sept 15</td>
-            <td class="topic">Discussion: AI for Network Security</td>
-            <td class="reading"></td>
+            <td><b>Discussion: Software Security</b>
+              <ul>
+                <li>(Vulnerabilities) <a href="https://ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_03A-2_Li_paper.pdf">VulDeePecker: A Deep Learning-Based System for Vulnerability Detection. NDSS 2018.</a></li>
+                <li>(Malware) <a href="https://dl.acm.org/doi/10.1145/3576915.3616589">Decoding the Secrets of Machine Learning in Windows Malware Classification: A Deep Dive into Datasets, Features, and Model Performance. ACM CCS 2023.</a></li>
+              </ul>
+            </td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Sept 17</td>
-            <td class="topic">Lecture: AI for Software Security</td>
-            <td class="reading"></td>
+            <td><b>Discussion: Web and Application Security</b>
+              <ul>
+                <li>(Web) <a href="https://ieeexplore.ieee.org/document/10202610">JSRevealer: A Robust Malicious JavaScript Detector against Obfuscation. IEEE/IFIP DSN 2023. </a></li>
+                <li>(Enterprise) <a href="https://www.usenix.org/conference/usenixsecurity21/presentation/ho">Hopper: Modeling and Detecting Lateral Movement. USENIX Security 2021. </a></li>
+              </ul>
+            </td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Sept 22</td>
-            <td class="topic">Discussion: AI for Software Security</td>
-            <td class="reading"></td>
+            <td class="topic"><b>Discussion: Smart Home Security</b>
+              <ul>
+                <li> (IoT) <a href="https://www.ndss-symposium.org/ndss-paper/auto-draft-196/">A Lightweight IoT Cryptojacking Detection Mechanism in Heterogeneous Smart Home Networks. NDSS 2022</a></li>
+                <li> (Activity) <a href="https://www.usenix.org/conference/usenixsecurity21/presentation/fu-chenglong">HAWatcher: Semantics-Aware Anomaly Detection for Appified Smart Homes. USENIX Security 2021.</a></li>
+              </ul>
+            </td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Sept 24</td>
-            <td class="topic">Lecture: AI for Cyber-Physical Systems (CPS) Security</td>
-            <td class="reading"></td>
-            <td class="due">—</td>
+            <td class="topic"><b>Discussion: Cyber-Physical Systems (CPS) Security</b>
+              <ul>
+                <li> (ICS) <a href="https://www.usenix.org/conference/usenixsecurity25/presentation/wolsing">GeCos Replacing Experts: Generalizable and Comprehensible Industrial Intrusion Detection. USENIX Security 2025.</a></li>
+                <li> (AVs) <a href="https://dl.acm.org/doi/10.1145/3548606.3560558">DriveFuzz: Discovering Autonomous Driving Bugs through Driving Quality-Guided Fuzzing. ACM CCS 2022.</a></li>
+              </ul>
+            </td>
+            <td class="due">HW1 due (Sept 25)<br>HW2 out (Sept 25)</td>
           </tr>
           <tr>
             <td class="week">Sept 29</td>
-            <td class="topic">Discussion: AI for CPS Security</td>
-            <td class="reading"></td>
+            <td class="topic"><b>Discussion: Scams and Phishing</b>
+              <ul>
+                <li>(Phishing Detection) <a href="https://www.usenix.org/conference/usenixsecurity22/presentation/liu-ruofan">Inferring Phishing Intention via Webpage Appearance and Dynamics: A Deep Vision Based Approach. USENIX Security 2022.</a></li>
+                <li>(Phishing Generation) <a href="https://www.usenix.org/conference/usenixsecurity26/presentation/czybik">A Large-Scale Study of Personalized Phishing using Large Language Models. USENIX Security 2026.</a></li>
+              </ul>
+            </td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Oct 1</td>
-            <td class="topic">Discussion: Usable Security</td>
-            <td class="reading"></td>
+            <td class="topic"><b>Discussion: Authentication</b>
+            <ul>
+              <li>(Passwords) <a href="https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/melicher">Fast, Lean, and Accurate: Modeling Password Guessability Using Neural Networks. USENIX Security 2016. </a></li>
+              <li>(Keystroke Biometrics) <a href="https://ieeexplore.ieee.org/document/9539873/">TypeNet: Deep Learning Keystroke Biometrics. IEEE T-BIOM 2021. </a></li>
+            </ul>
+            </td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Oct 6</td>
-            <td class="topic">Discussion: Malware Detection</td>
-            <td class="reading"></td>
+            <td class="topic"><b>Discussion: LLMs and Agents</b>
+              <ul>
+                <li>(Red Teaming) <a href="https://ieeexplore.ieee.org/document/11573490">Incalmo: An Autonomous LLM-assisted System for Red Teaming Multi-Host Networks. IEEE S&P 2026. </a></li>
+                <li>(Software Engineering) <a href="https://www.ndss-symposium.org/ndss-paper/decompiling-the-synergy-an-empirical-study-of-human-llm-teaming-in-software-reverse-engineering/">Decompiling the Synergy: An Empirical Study of Human-LLM Teaming in Software Reverse Engineering. NDSS 2026. </a></li>
+              </ul>
+            </td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Oct 8</td>
-            <td class="topic">Discussion: Web and Application Security</td>
-            <td class="reading"></td>
-            <td class="due">—</td>
+            <td class="topic"><b>Activity: Project Brainstorming and Team Matching</b></td>
+            <td class="due">HW2 due (Oct 9)</td>
           </tr>
           <tr class="milestone">
             <td class="week">Oct 13</td>
             <td class="topic"><b>No Class - Fall Recess</b></td>
-            <td class="reading"></td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Oct 15</td>
-            <td class="topic">Activity: Project Brainstorming and Team Matching</td>
-            <td class="reading"></td>
+            <td class="topic"><b>Discussion: Humans vs AI</b>
+              <ul>
+                <li> <a href="https://openreview.net/forum?id=Us00XndbVi">Comparing AI Agents to Cybersecurity Professionals in Real-World Penetration Testing. ICLR 2026.</a></li>
+                <li> <a href="https://www.usenix.org/conference/usenixsecurity23/presentation/aonzo">Humans vs. Machines in Malware Classification. USENIX Security 2023.</a></li>
+              </ul>
+            </td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Oct 20</td>
-            <td class="topic">Activity: Project Meetings</td>
-            <td class="reading"></td>
-            <td class="due">—</td>
+            <td class="topic"><b>Activity: Meet with Project Teams</b></td>
+            <td class="due">Project Proposals due (Oct 21)</td>
           </tr>
           <tr>
             <td class="week">Oct 22</td>
-            <td class="topic">Discussion: LLMs and Agents</td>
-            <td class="reading"></td>
+            <td class="topic"><b>Lecture: Explainable AI (XAI) for Security</b></td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Oct 27</td>
-            <td class="topic">Discussion: LLMs and Agents II</td>
-            <td class="reading"></td>
+            <td class="topic"><b>Discussion: XAI for Security</b>
+              <ul>
+                <li><a href="https://dl.acm.org/doi/10.1145/3548606.3560609">AI/ML for Network Security: The Emperor has no Clothes. ACM CCS 2022.</a></li>
+                <li><a href="https://www.ndss-symposium.org/ndss-paper/attributions-for-ml-based-ics-anomaly-detection-from-theory-to-practice/">Attributions for ML-based ICS Anomaly Detection: From Theory to Practice. NDSS 2024.</a></li>
+              </ul>
+            </td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Oct 29</td>
-            <td class="topic">Lecture: Explainable AI (XAI)</td>
-            <td class="reading"></td>
+            <td class="topic"><b>Lecture: Attacking ML and AI</b></td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Nov 3</td>
-            <td class="topic">Discussion: XAI for Security</td>
-            <td class="reading"></td>
+            <td class="topic"><b>Discussion: Attacking ML (Inference)</b>
+              <ul>
+                <li><a href="https://dl.acm.org/doi/10.1145/2976749.2978392">Accessorize to a Crime: Real and Stealthy Attacks on State-of-the-Art Face Recognition. ACM CCS 2016.</a></li>
+                <li><a href="https://www.usenix.org/conference/usenixsecurity21/presentation/sato">Dirty Road Can Attack: Security of Deep Learning based Automated Lane Centering under Physical-World Attack. USENIX Security 2022.</a></li>
+              </ul>
+            </td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Nov 5</td>
-            <td class="topic">Lecture: Attacking ML</td>
-            <td class="reading"></td>
+            <td class="topic"><b>Discussion: Attacking ML (Supply Chain)</b>
+              <ul>
+                <li><a href="https://www.usenix.org/conference/usenixsecurity21/presentation/schuster">You Autocomplete Me: Poisoning Vulnerabilities in Neural Code Completion. USENIX Security 2021.</a></li>
+                <li><a href="https://www.usenix.org/conference/usenixsecurity21/presentation/severi">Explanation-Guided Backdoor Poisoning Attacks Against Malware Classifiers. USENIX Security 2021.</a></li>
+              </ul>
+            </td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Nov 10</td>
-            <td class="topic">Activity: Midpoint Presentations</td>
-            <td class="reading"></td>
+            <td class="topic"><b>Activity: Midpoint Presentations</b></td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Nov 12</td>
-            <td class="topic">Discussion: Attacking ML (Inference)</td>
-            <td class="reading"></td>
+            <td class="topic"><b>Discussion: Attacking ML (Privacy)</b>
+              <ul>
+                <li><a href="https://www.ndss-symposium.org/ndss-paper/ml-leaks-model-and-data-independent-membership-inference-attacks-and-defenses-on-machine-learning-models/">ML-Leaks: Model and Data Independent Membership Inference Attacks and Defenses on Machine Learning Models. NDSS 2019.</a></li>
+                <li><a href="https://openreview.net/forum?id=vjel3nWP2a">Scalable Extraction of Training Data from Aligned, Production Language Models. ICLR 2025.</a></li>
+              </ul>
+            </td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Nov 17</td>
-            <td class="topic">Discussion: Attacking ML (Privacy)</td>
-            <td class="reading"></td>
+            <td class="topic"><b>Discussion: Human Factors Challenges</b>
+              <ul>
+                <li><a href="https://www.usenix.org/conference/usenixsecurity22/presentation/alahmadi">99% False Positives: A Qualitative Study of SOC Analysts' Perspectives on Security Alarms. USENIX Security 2021.</a></li>
+                <li><a href="https://dl.acm.org/doi/10.1145/3576915.3623157">Do Users Write More Insecure Code with AI Assistants? ACM CCS 2023.</a></li>
+              </ul>
+            </td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Nov 19</td>
-            <td class="topic">Discussion: Attacking ML (Supply Chain)</td>
-            <td class="reading"></td>
+            <td class="topic"><b>Discussion: Organizational Challenges</b>
+              <ul>
+                <li><a href="https://www.usenix.org/conference/usenixsecurity23/presentation/mink">"Security is not my field, I'm a stats guy”: A Qualitative Root Cause Analysis of Barriers to Adversarial Machine Learning Defenses in Industry. USENIX Security 2023.</a></li>
+                <li><a href="https://www.usenix.org/conference/soups2025/presentation/fung">Adopting AI to Protect Industrial Control Systems: Assessing Challenges and Opportunities from the Operators' Perspective. USENIX SOUPS 2025.</a></li>
+              </ul>
+            </td>
             <td class="due">—</td>
           </tr>
           <tr class="milestone">
             <td class="week">Nov 24</td>
             <td class="topic"><b>No Class - Class Recess</b></td>
-            <td class="reading"></td>
             <td class="due">—</td>
           </tr>
           <tr class="milestone">
             <td class="week">Nov 26</td>
             <td class="topic"><b>No Class - Thanksgiving</b></td>
-            <td class="reading"></td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Dec 1</td>
-            <td class="topic">Discussion: Human Factors</td>
-            <td class="reading"></td>
+            <td class="topic"><b>Final Project Presentations</b></td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Dec 3</td>
-            <td class="topic"><b>Discussion: Organizational Factors</b></td>
-            <td class="reading"></td>
+            <td class="topic"><b>Final Project Presentations</b></td>
             <td class="due">—</td>
           </tr>
           <tr>
             <td class="week">Dec 8</td>
-            <td class="topic"><b>Final Project Presentations</b></td>
-            <td class="reading"></td>
-            <td class="due">—</td>
+            <td class="topic"><b>Course Closing</b></td>
+            <td class="due">Project Reports due (TBA; during exams period)</td>
           </tr>
         </tbody>
       </table>
