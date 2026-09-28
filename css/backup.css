@@ -1,0 +1,37 @@
+#news {
+    font-family: sans-serif;
+    font-size: 14px;   
+}
+
+#pubs {
+    font-family: sans-serif;
+    font-size: 14px;   
+}
+
+img.logo {
+    vertical-align: middle;
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#icon {
+    padding: 0px;
+    font-size: 24px;
+}
+
+body {
+  padding-top: 20px;
+  font-family: sans-serif;
+  overflow-y: scroll;
+}
+
+blockquote {
+    border-left: 4px solid #000000;   /* vertical bar */
+    padding-left: 1em;             /* space between bar and text */
+    margin-left: 0;                /* align with surrounding text */
+    font-size: 16px;
+    font-style: bold italic;            /* optional, for emphasis */
+    background-color: rgba(253, 181, 21, 0.6);     /* subtle background */
+    /* was #d7eaff;  */
+}

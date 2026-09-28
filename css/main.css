@@ -27,12 +27,13 @@ body {
 }
 
 blockquote {
-    border-left: 4px solid #000000;   /* vertical bar */
+    border-left: 4px solid #800017;   /* vertical bar */
     padding-left: 1em;             /* space between bar and text */
     margin-left: 0;                /* align with surrounding text */
     font-size: 16px;
     font-style: bold italic;            /* optional, for emphasis */
-    background-color: rgba(253, 181, 21, 0.6);     /* subtle background */
+    background-color: rgba(200, 0, 23, 0.2);     /* subtle background */
+    /* background-color: rgba(253, 181, 21, 0.4);     UMBC colors */
     /* was #d7eaff;  */
 }
 
